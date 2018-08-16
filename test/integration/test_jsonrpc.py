@@ -29,7 +29,7 @@ def test_dashd():
 
     assert hasattr(dashd, 'rpc_connection')
 
-    # Dash testnet block 0 hash == 00000bafbc94add76cb75e2ec92894837288a481e5c005f6563d91623bf8bc2c
+    # Botcoin testnet block 0 hash == 00000bafbc94add76cb75e2ec92894837288a481e5c005f6563d91623bf8bc2c
     # test commands without arguments
     info = dashd.rpc_command('getinfo')
     info_keys = [

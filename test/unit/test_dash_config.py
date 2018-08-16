@@ -62,7 +62,7 @@ def test_get_rpc_creds():
     assert creds.get('port') == 19998
 
 
-# ensure dash network (mainnet, testnet) matches that specified in config
+# ensure botcoin network (mainnet, testnet) matches that specified in config
 # requires running dashd on whatever port specified...
 #
 # This is more of a dashd/jsonrpc test than a config test...

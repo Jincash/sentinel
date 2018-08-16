@@ -1,12 +1,12 @@
-# Dash Sentinel
+# Botcoin Sentinel
 
-An all-powerful toolset for Dash.
+An all-powerful toolset for Botcoin.
 
-[![Build Status](https://travis-ci.org/dashpay/sentinel.svg?branch=master)](https://travis-ci.org/dashpay/sentinel)
+[![Build Status](https://travis-ci.org/botcoin-core/sentinel.svg?branch=master)](https://travis-ci.org/botcoin-core/sentinel)
 
-Sentinel is an autonomous agent for persisting, processing and automating Dash governance objects and tasks, and for expanded functions in the upcoming Dash V13 release (Evolution).
+Sentinel is an autonomous agent for persisting, processing and automating Botcoin governance objects and tasks, and for expanded functions in the upcoming Botcoin V13 release (Evolution).
 
-Sentinel is implemented as a Python application that binds to a local version 12 dashd instance on each Dash Masternode.
+Sentinel is implemented as a Python application that binds to a local version 12 dashd instance on each Botcoin Masternode.
 
 This guide covers installing Sentinel onto an existing Masternode in Ubuntu 14.04 / 16.04.
 
@@ -23,15 +23,15 @@ Update system packages and ensure virtualenv is installed:
     $ sudo apt-get update
     $ sudo apt-get -y install python-virtualenv
 
-Make sure the local Dash daemon running is at least version 12.1 (120100)
+Make sure the local Botcoin daemon running is at least version 12.1 (120100)
 
-    $ dash-cli getinfo | grep version
+    $ botcoin-cli getinfo | grep version
 
 ### 2. Install Sentinel
 
 Clone the Sentinel repo and install Python dependencies.
 
-    $ git clone https://github.com/dashpay/sentinel.git && cd sentinel
+    $ git clone https://github.com/botcoin-core/sentinel.git && cd sentinel
     $ virtualenv ./venv
     $ ./venv/bin/pip install -r requirements.txt
 
@@ -55,9 +55,9 @@ With all tests passing and crontab setup, Sentinel will stay in sync with dashd 
 
 ## Configuration
 
-An alternative (non-default) path to the `dash.conf` file can be specified in `sentinel.conf`:
+An alternative (non-default) path to the `botcoin.conf` file can be specified in `sentinel.conf`:
 
-    dash_conf=/path/to/dash.conf
+    dash_conf=/path/to/botcoin.conf
 
 ## Troubleshooting
 
@@ -67,11 +67,11 @@ To view debug output, set the `SENTINEL_DEBUG` environment variable to anything 
 
 ## Contributing
 
-Please follow the [DashCore guidelines for contributing](https://github.com/dashpay/dash/blob/master/CONTRIBUTING.md).
+Please follow the [DashCore guidelines for contributing](https://github.com/botcoin-core/botcoin/blob/master/CONTRIBUTING.md).
 
 Specifically:
 
-* [Contributor Workflow](https://github.com/dashpay/dash/blob/master/CONTRIBUTING.md#contributor-workflow)
+* [Contributor Workflow](https://github.com/botcoin-core/botcoin/blob/master/CONTRIBUTING.md#contributor-workflow)
 
     To contribute a patch, the workflow is as follows:
 

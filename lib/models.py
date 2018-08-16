@@ -315,9 +315,9 @@ class Proposal(GovernanceClass, BaseModel):
                 printdbg("\tProposal amount [%s] is negative or zero, returning False" % self.payment_amount)
                 return False
 
-            # payment address is valid base58 dash addr, non-multisig
+            # payment address is valid base58 botcoin addr, non-multisig
             if not dashlib.is_valid_dash_address(self.payment_address, config.network):
-                printdbg("\tPayment address [%s] not a valid Dash address for network [%s], returning False" % (self.payment_address, config.network))
+                printdbg("\tPayment address [%s] not a valid Botcoin address for network [%s], returning False" % (self.payment_address, config.network))
                 return False
 
             # URL
@@ -330,7 +330,7 @@ class Proposal(GovernanceClass, BaseModel):
                 printdbg("\tProposal URL [%s] has whitespace, returning False" % self.name)
                 return False
 
-            # Dash Core restricts proposals to 512 bytes max
+            # Botcoin Core restricts proposals to 512 bytes max
             if len(self.serialise()) > (self.MAX_DATA_SIZE * 2):
                 printdbg("\tProposal [%s] is too big, returning False" % self.name)
                 return False
